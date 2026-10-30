@@ -1,0 +1,10 @@
+Vendor Onboarding SOP
+
+1. Due diligence review
+The vendor onboarding workflow includes screening, contract approval, and security review.
+
+2. Operational controls
+Before onboarding, the responsible manager must confirm insurance, regulatory alignment, and approved terms.
+
+3. Approval authority
+A final approval is required by the Procurement Lead and the Compliance Officer before activation.

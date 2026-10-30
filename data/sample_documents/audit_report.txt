@@ -1,0 +1,3 @@
+Internal Audit Summary
+
+The latest audit found that training completion, policy sign-off, and escalation logs were generally compliant. Minor gaps were noted in document version control and approval traceability. Corrective actions must be monitored by the Audit and Risk Committee.

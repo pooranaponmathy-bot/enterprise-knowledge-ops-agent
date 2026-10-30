@@ -1,0 +1,10 @@
+Policy Manual
+
+1. Compliance Oversight
+All employees must report material compliance incidents to the Legal and Compliance Office within 24 hours. Major incidents include regulatory violations, data breaches, or repeated policy non-compliance.
+
+2. Escalation Policy
+Escalation should move from team leads to Division Compliance, and then to General Counsel when the incident is high impact or threatens legal exposure.
+
+3. Exception Handling
+Any policy deviation must be approved through a written exception request and managed by Risk and Compliance.

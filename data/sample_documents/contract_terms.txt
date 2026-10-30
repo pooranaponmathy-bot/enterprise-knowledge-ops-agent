@@ -1,0 +1,7 @@
+Master Services Agreement
+
+Section 8: Term and Termination
+This Agreement may be terminated for material breach, non-payment, or repeated regulatory non-compliance. Termination requires written notice and a 30-day cure period, unless the breach is severe.
+
+Section 12: Data Retention
+Customer data must be retained in accordance with the agreed retention schedule and internal legal holds.
