@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Enterprise Knowledge Ops Agent Architecture Flow</title>
+  <desc id="desc">Flow diagram showing business user query entering the FastAPI/CLI layer, orchestrator, planner, retriever, vector store, reasoner, validator, memory, and final response to the user.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#f5f7fb"/>
+      <stop offset="100%" stop-color="#eef3ff"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0" x2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0" x2="1">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0" x2="1">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#475569"/>
+    </marker>
+    <style>
+      .title { font: 700 26px 'Segoe UI', Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 600 14px 'Segoe UI', Arial, sans-serif; fill: #475569; }
+      .node-label { font: 600 18px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+      .small-label { font: 600 15px 'Segoe UI', Arial, sans-serif; fill: #0f172a; }
+      .tiny { font: 500 12px 'Segoe UI', Arial, sans-serif; fill: #334155; }
+      .box { rx: 20; ry: 20; }
+      .arrow-line { stroke: #475569; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+      .dashed { stroke-dasharray: 10 8; }
+      .process { fill: url(#blueGrad); }
+      .retriever { fill: url(#greenGrad); }
+      .validator { fill: url(#amberGrad); }
+      .memory { fill: #7c3aed; }
+      .data { fill: #e2e8f0; stroke: #64748b; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1600" height="980" fill="url(#bg)"/>
+  <text x="800" y="54" text-anchor="middle" class="title">Enterprise Knowledge Ops Agent Architecture</text>
+  <text x="800" y="82" text-anchor="middle" class="subtitle">Local multi-agent knowledge workflow for grounded reasoning and governance</text>
+
+  <!-- User -->
+  <rect class="data box" x="80" y="180" width="180" height="110"/>
+  <text x="170" y="228" text-anchor="middle" class="small-label">Business User</text>
+  <text x="170" y="252" text-anchor="middle" class="tiny">Complex enterprise</text>
+  <text x="170" y="268" text-anchor="middle" class="tiny">questions</text>
+
+  <!-- API -->
+  <rect class="process box" x="330" y="160" width="220" height="150"/>
+  <text x="440" y="210" text-anchor="middle" class="node-label">FastAPI / CLI</text>
+  <text x="440" y="238" text-anchor="middle" class="tiny" fill="#e2e8f0">Input validation</text>
+  <text x="440" y="256" text-anchor="middle" class="tiny" fill="#e2e8f0">Query routing</text>
+  <text x="440" y="274" text-anchor="middle" class="tiny" fill="#e2e8f0">Response delivery</text>
+
+  <!-- Orchestrator -->
+  <rect class="process box" x="610" y="160" width="220" height="150"/>
+  <text x="720" y="210" text-anchor="middle" class="node-label">Orchestrator</text>
+  <text x="720" y="238" text-anchor="middle" class="tiny" fill="#e2e8f0">Task planning</text>
+  <text x="720" y="256" text-anchor="middle" class="tiny" fill="#e2e8f0">Agent routing</text>
+  <text x="720" y="274" text-anchor="middle" class="tiny" fill="#e2e8f0">Trace logging</text>
+
+  <!-- Planner -->
+  <rect class="process box" x="900" y="140" width="210" height="120"/>
+  <text x="1005" y="188" text-anchor="middle" class="node-label">Planner Agent</text>
+  <text x="1005" y="214" text-anchor="middle" class="tiny" fill="#e2e8f0">Decompose query</text>
+  <text x="1005" y="232" text-anchor="middle" class="tiny" fill="#e2e8f0">Plan subtasks</text>
+
+  <!-- Retriever -->
+  <rect class="retriever box" x="900" y="300" width="210" height="120"/>
+  <text x="1005" y="348" text-anchor="middle" class="node-label">Retriever Agent</text>
+  <text x="1005" y="374" text-anchor="middle" class="tiny" fill="#e2e8f0">Semantic retrieval</text>
+  <text x="1005" y="392" text-anchor="middle" class="tiny" fill="#e2e8f0">Top-k evidence</text>
+
+  <!-- Vector Store -->
+  <rect class="data box" x="1180" y="290" width="210" height="140"/>
+  <text x="1285" y="338" text-anchor="middle" class="small-label">Local Vector Store</text>
+  <text x="1285" y="366" text-anchor="middle" class="tiny">TF-IDF / similarity</text>
+  <text x="1285" y="384" text-anchor="middle" class="tiny">Indexed documents</text>
+  <text x="1285" y="402" text-anchor="middle" class="tiny">Evidence ranking</text>
+
+  <!-- Documents -->
+  <rect class="data box" x="1180" y="170" width="210" height="90"/>
+  <text x="1285" y="208" text-anchor="middle" class="small-label">Enterprise Docs</text>
+  <text x="1285" y="228" text-anchor="middle" class="tiny">Policies, SOPs,</text>
+  <text x="1285" y="244" text-anchor="middle" class="tiny">contracts, audits</text>
+
+  <!-- Reasoner -->
+  <rect class="process box" x="660" y="430" width="240" height="150"/>
+  <text x="780" y="480" text-anchor="middle" class="node-label">Reasoner Agent</text>
+  <text x="780" y="508" text-anchor="middle" class="tiny" fill="#e2e8f0">Synthesize answer</text>
+  <text x="780" y="526" text-anchor="middle" class="tiny" fill="#e2e8f0">Across retrieved docs</text>
+  <text x="780" y="544" text-anchor="middle" class="tiny" fill="#e2e8f0">Grounded summary</text>
+
+  <!-- Validator -->
+  <rect class="validator box" x="400" y="430" width="220" height="150"/>
+  <text x="510" y="480" text-anchor="middle" class="node-label">Validator Agent</text>
+  <text x="510" y="508" text-anchor="middle" class="tiny" fill="#fff7ed">Grounding check</text>
+  <text x="510" y="526" text-anchor="middle" class="tiny" fill="#fff7ed">Confidence threshold</text>
+  <text x="510" y="544" text-anchor="middle" class="tiny" fill="#fff7ed">Failure detection</text>
+
+  <!-- Memory -->
+  <rect class="memory box" x="180" y="430" width="180" height="150"/>
+  <text x="270" y="480" text-anchor="middle" class="node-label">Memory Agent</text>
+  <text x="270" y="508" text-anchor="middle" class="tiny" fill="#f5f3ff">Session state</text>
+  <text x="270" y="526" text-anchor="middle" class="tiny" fill="#f5f3ff">Trace retention</text>
+  <text x="270" y="544" text-anchor="middle" class="tiny" fill="#f5f3ff">Context memory</text>
+
+  <!-- Evaluation -->
+  <rect class="data box" x="170" y="700" width="320" height="140"/>
+  <text x="330" y="746" text-anchor="middle" class="small-label">Evaluation &amp; Guardrails</text>
+  <text x="330" y="774" text-anchor="middle" class="tiny">Retrieval relevance</text>
+  <text x="330" y="792" text-anchor="middle" class="tiny">Grounding score</text>
+  <text x="330" y="810" text-anchor="middle" class="tiny">High-risk fallback logic</text>
+
+  <!-- Final answer -->
+  <rect class="process box" x="620" y="700" width="260" height="140"/>
+  <text x="750" y="746" text-anchor="middle" class="node-label">Final Answer</text>
+  <text x="750" y="774" text-anchor="middle" class="tiny" fill="#e2e8f0">Explainable</text>
+  <text x="750" y="792" text-anchor="middle" class="tiny" fill="#e2e8f0">Grounded</text>
+  <text x="750" y="810" text-anchor="middle" class="tiny" fill="#e2e8f0">Source-attributed</text>
+
+  <!-- arrows -->
+  <path d="M260 235 L330 235" class="arrow-line"/>
+  <path d="M550 235 L610 235" class="arrow-line"/>
+  <path d="M830 235 L900 235" class="arrow-line"/>
+  <path d="M1110 200 L1180 200" class="arrow-line"/>
+  <path d="M1110 360 L1180 360" class="arrow-line"/>
+  <path d="M1005 260 L1005 300" class="arrow-line"/>
+
+  <path d="M900 365 L820 365" class="arrow-line dashed"/>
+  <path d="M660 500 L620 500" class="arrow-line"/>
+  <path d="M400 500 L360 500" class="arrow-line"/>
+  <path d="M180 500 L160 500" class="arrow-line dashed"/>
+
+  <path d="M510 580 L510 655 L750 655 L750 700" class="arrow-line"/>
+  <path d="M330 840 L330 900 L750 900 L750 840" class="arrow-line dashed"/>
+  <path d="M780 580 L780 700" class="arrow-line"/>
+
+  <!-- side annotations -->
+  <text x="1040" y="470" class="tiny">Retriever → Reasoner</text>
+  <text x="170" y="640" class="tiny">Validation and guardrails</text>
+  <text x="940" y="760" class="tiny">user receives answer + rationale</text>
+</svg>
